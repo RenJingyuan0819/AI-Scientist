@@ -1,0 +1,234 @@
+{
+  "width": 4096,
+  "height": 2048,
+  "pad": 0.012,
+  "projection": "mollweide",
+  "sky": {
+    "frame": "galactic",
+    "longitudeIncreases": "left",
+    "centre": "galactic centre"
+  },
+  "earth": {
+    "frame": "geographic",
+    "longitudeIncreases": "right",
+    "centre": "prime meridian"
+  },
+  "equatorArcminPerPixel": 5.2734375,
+  "hipsOrder": 2,
+  "coverage": {
+    "bothBands": 0.6498196918891943,
+    "nearUvOnly": 0.1182606736474183,
+    "dustModel": 0.2302405191649867,
+    "unfilled": 0.0016791152984006817
+  },
+  "gapModel": {
+    "dustEdges": [
+      0.0,
+      10.0,
+      20.0,
+      30.0,
+      40.0,
+      50.0,
+      60.0,
+      70.0,
+      80.0,
+      90.0,
+      100.0,
+      110.0,
+      120.0,
+      130.0,
+      140.0,
+      150.0
+    ],
+    "nuvMedian": [
+      0.003947543445974588,
+      0.004363183863461018,
+      0.0035593081265687943,
+      0.0035593081265687943,
+      0.006121661048382521,
+      0.00666519021615386,
+      0.006121661048382521,
+      0.007432526908814907,
+      0.0054395850747823715,
+      0.0054395850747823715,
+      0.0054395850747823715,
+      0.0054395850747823715,
+      0.0054395850747823715,
+      0.0054395850747823715,
+      0.0054395850747823715
+    ],
+    "fuvOverNuv": [
+      0.11521725356578827,
+      0.09484799206256866,
+      0.09484799206256866,
+      0.10692248493432999,
+      0.19543133676052094,
+      0.22236359119415283,
+      0.22488948702812195,
+      0.22849830985069275,
+      0.19392365217208862,
+      0.19208326935768127,
+      0.19208326935768127,
+      0.19208326935768127,
+      0.19208326935768127,
+      0.19208326935768127,
+      0.19208326935768127
+    ],
+    "medianFuvOverNuv": 0.11521725356578827,
+    "planeDust": 150.0,
+    "faintNuv": 0.002760000294074416,
+    "fitPixels": 4078177
+  },
+  "assets": {
+    "sky": {
+      "ultraviolet": "maps/sky-ultraviolet.webp",
+      "ultravioletMeasured": "maps/sky-ultraviolet-measured.webp",
+      "visible": "maps/sky-visible.webp",
+      "infrared": "maps/sky-infrared.webp",
+      "provenance": "maps/sky-provenance.webp",
+      "provenanceCode": "maps/sky-provenance-code.png",
+      "closeups": {
+        "centre": {
+          "ultraviolet": "maps/closeup-centre-ultraviolet.webp",
+          "visible": "maps/closeup-centre-visible.webp",
+          "infrared": "maps/closeup-centre-infrared.webp"
+        },
+        "scorpius": {
+          "ultraviolet": "maps/closeup-scorpius-ultraviolet.webp",
+          "visible": "maps/closeup-scorpius-visible.webp",
+          "infrared": "maps/closeup-scorpius-infrared.webp"
+        },
+        "lmc": {
+          "ultraviolet": "maps/closeup-lmc-ultraviolet.webp",
+          "visible": "maps/closeup-lmc-visible.webp",
+          "infrared": "maps/closeup-lmc-infrared.webp"
+        },
+        "pleiades": {
+          "ultraviolet": "maps/closeup-pleiades-ultraviolet.webp",
+          "visible": "maps/closeup-pleiades-visible.webp",
+          "infrared": "maps/closeup-pleiades-infrared.webp"
+        },
+        "orion": {
+          "ultraviolet": "maps/closeup-orion-ultraviolet.webp",
+          "visible": "maps/closeup-orion-visible.webp",
+          "infrared": "maps/closeup-orion-infrared.webp"
+        },
+        "high-latitude": {
+          "ultraviolet": "maps/closeup-high-latitude-ultraviolet.webp",
+          "visible": "maps/closeup-high-latitude-visible.webp",
+          "infrared": "maps/closeup-high-latitude-infrared.webp"
+        }
+      }
+    },
+    "earth": {
+      "ultraviolet": "maps/earth-ultraviolet.webp",
+      "visible": "maps/earth-visible.webp",
+      "infrared": "maps/earth-infrared.webp"
+    }
+  },
+  "places": [
+    {
+      "id": "centre",
+      "name": "Galactic centre",
+      "longitude": 0.0,
+      "latitude": 0.0,
+      "fov": 28,
+      "zoom": 5.2,
+      "blurb": "The brightest part of the visible Milky Way, and one of the darkest in the ultraviolet."
+    },
+    {
+      "id": "scorpius",
+      "name": "Scorpius and Ophiuchus",
+      "longitude": 353.0,
+      "latitude": 18.0,
+      "fov": 32,
+      "zoom": 4.4,
+      "blurb": "Dust above the Galactic centre, lit by hot young stars."
+    },
+    {
+      "id": "lmc",
+      "name": "Large Magellanic Cloud",
+      "longitude": 280.47,
+      "latitude": -32.89,
+      "fov": 14,
+      "zoom": 8.0,
+      "blurb": "A nearby star-forming galaxy, lower right of the oval."
+    },
+    {
+      "id": "pleiades",
+      "name": "Pleiades",
+      "longitude": 166.6,
+      "latitude": -23.5,
+      "fov": 8,
+      "zoom": 11.0,
+      "blurb": "Young cluster at galactic longitude 166.6\u00b0, latitude \u221223.5\u00b0."
+    },
+    {
+      "id": "orion",
+      "name": "Orion",
+      "longitude": 209.0,
+      "latitude": -19.4,
+      "fov": 20,
+      "zoom": 6.2,
+      "blurb": "Massive stars and the clouds they illuminate."
+    },
+    {
+      "id": "high-latitude",
+      "name": "High-latitude field",
+      "longitude": 180.0,
+      "latitude": 55.0,
+      "fov": 26,
+      "zoom": 4.8,
+      "blurb": "GALEX pointings with unobserved gaps between them."
+    }
+  ],
+  "earthPlaces": [
+    {
+      "id": "atlantic",
+      "name": "Atlantic",
+      "longitude": -30.0,
+      "latitude": 15.0,
+      "zoom": 2.4
+    },
+    {
+      "id": "europe",
+      "name": "Europe and Africa",
+      "longitude": 18.0,
+      "latitude": 18.0,
+      "zoom": 3.4
+    },
+    {
+      "id": "east-asia",
+      "name": "East Asia",
+      "longitude": 115.0,
+      "latitude": 28.0,
+      "zoom": 3.4
+    },
+    {
+      "id": "americas",
+      "name": "The Americas",
+      "longitude": -80.0,
+      "latitude": 10.0,
+      "zoom": 2.6
+    },
+    {
+      "id": "north-cap",
+      "name": "Northern cap",
+      "longitude": 0.0,
+      "latitude": 75.0,
+      "zoom": 3.8
+    },
+    {
+      "id": "south-cap",
+      "name": "Southern cap",
+      "longitude": 0.0,
+      "latitude": -75.0,
+      "zoom": 3.8
+    }
+  ],
+  "provenanceLegend": {
+    "80": "GALEX far-UV and near-UV",
+    "160": "GALEX near-UV only; far-UV estimated",
+    "240": "No GALEX coverage; estimated from 12 \u00b5m dust"
+  }
+}

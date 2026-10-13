@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Ultraviolet sky</title>
+  <link rel="stylesheet" href="viewer.css">
+</head>
+<body>
+  <header class="top">
+    <div>
+      <p class="kicker">GALEX GR6/7 · Gaia DR3 · WISE 12 µm</p>
+      <h1>Ultraviolet sky</h1>
+    </div>
+    <p class="lede">The whole sky in a Mollweide oval, Galactic Centre in the middle, longitude increasing to the left. Colour in the ultraviolet plate follows the far-UV / near-UV ratio. The same oval can show visible starlight, warm dust, or the Earth.</p>
+  </header>
+
+  <div class="toolbar" role="toolbar" aria-label="Map controls">
+    <div class="group" role="group" aria-label="World">
+      <button type="button" data-domain="sky" aria-pressed="true">Sky</button>
+      <button type="button" data-domain="earth" aria-pressed="false">Earth</button>
+    </div>
+    <div class="group" role="group" aria-label="Band">
+      <button type="button" data-band="ultraviolet" aria-pressed="true">Ultraviolet</button>
+      <button type="button" data-band="visible" aria-pressed="false">Visible</button>
+      <button type="button" data-band="infrared" aria-pressed="false">Infrared</button>
+    </div>
+    <div class="group" role="group" aria-label="Layers">
+      <button type="button" id="estimates" aria-pressed="true">Estimates</button>
+      <button type="button" id="provenance" aria-pressed="false">Provenance</button>
+      <button type="button" id="grid" aria-pressed="true">Grid</button>
+    </div>
+    <div class="group zoom" role="group" aria-label="Zoom">
+      <button type="button" id="zoom-out" aria-label="Zoom out">−</button>
+      <button type="button" id="zoom-in" aria-label="Zoom in">+</button>
+      <button type="button" id="reset">Reset</button>
+    </div>
+  </div>
+
+  <main class="layout">
+    <section class="stage">
+      <canvas id="map" aria-label="All-sky map"></canvas>
+      <p id="readout" class="readout" aria-live="polite">Move across the map for coordinates.</p>
+    </section>
+    <aside class="side">
+      <h2 id="place-heading">Places</h2>
+      <div id="places" class="places"></div>
+      <figure id="closeup-figure">
+        <img id="closeup" alt="">
+        <figcaption id="closeup-caption"></figcaption>
+      </figure>
+      <dl class="legend">
+        <div><dt class="swatch uv"></dt><dd>Far-UV stronger toward violet, near-UV stronger toward gold.</dd></div>
+        <div><dt class="swatch measured"></dt><dd>Provenance tint: teal is near-UV only, rose is a dust estimate.</dd></div>
+      </dl>
+    </aside>
+  </main>
+
+  <details class="notes">
+    <summary>What is in the plate</summary>
+    <p>Far-UV (about 135–178 nm) and near-UV (about 177–283 nm) come from the public GALEX GR6/7 HiPS at CDS, resampled to this oval. Where both bands were imaged, the colour is their ratio. Where only near-UV was imaged, far-UV is scaled from the near-UV of similar dust. Where GALEX has no coverage, the pixel is the median ultraviolet of observed sky at a similar 12 µm brightness, except the bright inner plane, which is left faint because thick dust absorbs ultraviolet light. Turn estimates off to see only the GALEX pixels.</p>
+    <p>Visible light is the Gaia DR3 red, green, and blue flux map. Infrared is the WISE 12 µm WSSA dust map. Earth uses an Aura/OMI ozone composite for January 2016. In that composite the polar-night gap reaches about 66° N, and the cap is copied from the first bright latitude. Night lights are the VIIRS Black Marble, and the infrared Earth is a July 2016 MODIS land-surface temperature composite.</p>
+    <p>This is a practical plate, a few arcminutes per pixel. It is not the unpublished nside 2048 map, and it does not include Swift-UVOT, FIMS/SPEAR, TD-1, or the catalogue of individual Gaia stars.</p>
+  </details>
+
+  <footer>
+    <p>Data: GALEX GR6/7 (NASA/STScI, HiPS by CDS), Gaia DR3 (ESA/Gaia/DPAC), WSSA 12 µm (Meisner &amp; Finkbeiner 2014; NASA/JPL-Caltech), Aura/OMI ozone, VIIRS Black Marble, and MODIS land-surface temperature (NASA).</p>
+  </footer>
+  <script src="viewer.js"></script>
+</body>
+</html>
